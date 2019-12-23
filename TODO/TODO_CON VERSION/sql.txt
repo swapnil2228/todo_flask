@@ -1,0 +1,22 @@
+CREATE TABLE IF NOT EXISTS "data_table" (
+"index" INTEGER,
+  "first_name" VARCHAR(256),
+  "last_name" VARCHAR(256),
+  "address" VARCHAR(256),
+  "city" VARCHAR(256),
+  "state" VARCHAR(2),
+  "zip" VARCHAR(5)
+);
+
+
+  CREATE TABLE IF NOT EXISTS "Todo" (
+          "id" INTEGER PRIMARY KEY,
+          "Title" TEXT,
+          "Description" TEXT,
+          "_is_done" boolean DEFAULT 0,
+          "_is_deleted" boolean DEFAULT 0,
+          "CreatedOn" Date DEFAULT CURRENT_DATE,
+          "DueDate" Date
+        );
+
+        CREATE INDEX "ix_Todo_id" ON "Todo" ("id");
